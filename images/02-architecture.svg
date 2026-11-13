@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760">
+  <rect width="1000" height="760" fill="#f4f7fb"/>
+  <text x="28" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Harbor Shop services and their own data</text>
+  <text x="28" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">The website talks only to the gateway. Each service keeps its own database.</text>
+
+  <rect x="28" y="92" width="180" height="56" rx="10" fill="#16324f"/>
+  <text x="48" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">Customer browser</text>
+  <line x1="208" y1="120" x2="248" y2="120" stroke="#1d6fbf" stroke-width="2"/>
+  <polygon points="248,114 260,120 248,126" fill="#1d6fbf"/>
+
+  <rect x="260" y="92" width="200" height="56" rx="10" fill="#1d6fbf"/>
+  <text x="292" y="126" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">API gateway</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <rect x="28" y="190" width="300" height="92" rx="10" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="44" y="220" font-weight="700" fill="#16324f">Identity</text>
+    <text x="44" y="244" fill="#1c2833">Java, Spring Boot</text>
+    <text x="44" y="266" fill="#0e7c66">Own PostgreSQL: users, roles, tokens</text>
+
+    <rect x="348" y="190" width="300" height="92" rx="10" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="364" y="220" font-weight="700" fill="#16324f">Catalog</text>
+    <text x="364" y="244" fill="#1c2833">Go</text>
+    <text x="364" y="266" fill="#0e7c66">Own PostgreSQL: products and prices</text>
+
+    <rect x="668" y="190" width="304" height="92" rx="10" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="684" y="220" font-weight="700" fill="#16324f">Inventory</text>
+    <text x="684" y="244" fill="#1c2833">Go</text>
+    <text x="684" y="266" fill="#0e7c66">Own PostgreSQL: stock counts</text>
+
+    <rect x="28" y="306" width="300" height="92" rx="10" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+    <text x="44" y="336" font-weight="700" fill="#16324f">Cart</text>
+    <text x="44" y="360" fill="#1c2833">TypeScript on Node.js</text>
+    <text x="44" y="382" fill="#0e7c66">Redis: temporary carts</text>
+
+    <rect x="348" y="306" width="300" height="92" rx="10" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="364" y="336" font-weight="700" fill="#16324f">Orders</text>
+    <text x="364" y="360" fill="#1c2833">C# on .NET</text>
+    <text x="364" y="382" fill="#0e7c66">Own PostgreSQL: order records</text>
+
+    <rect x="668" y="306" width="304" height="92" rx="10" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="684" y="336" font-weight="700" fill="#16324f">Payments</text>
+    <text x="684" y="360" fill="#1c2833">Python, FastAPI</text>
+    <text x="684" y="382" fill="#0e7c66">Own PostgreSQL: payment results</text>
+
+    <rect x="28" y="422" width="300" height="92" rx="10" fill="#ffffff" stroke="#5c6b7a" stroke-width="2"/>
+    <text x="44" y="452" font-weight="700" fill="#16324f">Search</text>
+    <text x="44" y="476" fill="#1c2833">Python</text>
+    <text x="44" y="498" fill="#0e7c66">OpenSearch: product text index</text>
+
+    <rect x="348" y="422" width="300" height="92" rx="10" fill="#ffffff" stroke="#5c6b7a" stroke-width="2"/>
+    <text x="364" y="452" font-weight="700" fill="#16324f">Notifications</text>
+    <text x="364" y="476" fill="#1c2833">TypeScript worker</text>
+    <text x="364" y="498" fill="#0e7c66">Reads events, sends the receipt</text>
+
+    <rect x="668" y="422" width="304" height="92" rx="10" fill="#16324f"/>
+    <text x="684" y="456" font-weight="700" fill="#ffffff">Kafka</text>
+    <text x="684" y="482" fill="#d6e4f0">Carries facts such as</text>
+    <text x="684" y="502" fill="#d6e4f0">"order 1001 was placed"</text>
+  </g>
+
+  <rect x="28" y="540" width="944" height="188" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="48" y="574" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">How to read this picture</text>
+  <text x="48" y="606" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Identity does not share its user tables with orders. Orders store Priya's user id, then ask identity only when a token must be checked.</text>
+  <text x="48" y="634" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Catalog and inventory are both Go because both are small, fast request services. They stay separate so a sale can scale stock without scaling product pages.</text>
+  <text x="48" y="662" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Cart uses Redis because a cart can expire. Orders use PostgreSQL because a paid order must not disappear.</text>
+  <text x="48" y="690" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">This is the build. Keycloak is explained later in the document and is not one of these boxes yet.</text>
+</svg>

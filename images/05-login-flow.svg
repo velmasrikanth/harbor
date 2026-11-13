@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <rect width="960" height="640" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Login without Keycloak</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Harbor's own identity service checks the password and issues the tokens.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">
+    <rect x="300" y="90" width="360" height="52" rx="8" fill="#16324f"/>
+    <text x="480" y="122" text-anchor="middle" fill="#ffffff">1. Priya submits email and password</text>
+
+    <line x1="480" y1="142" x2="480" y2="162" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,162 486,162 480,174" fill="#1d6fbf"/>
+
+    <rect x="250" y="174" width="460" height="52" rx="8" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="480" y="206" text-anchor="middle">2. Gateway forwards POST /login to identity</text>
+
+    <line x1="480" y1="226" x2="480" y2="246" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,246 486,246 480,258" fill="#1d6fbf"/>
+
+    <rect x="210" y="258" width="540" height="64" rx="8" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="480" y="286" text-anchor="middle">3. Identity loads priya@example.com from PostgreSQL</text>
+    <text x="480" y="306" text-anchor="middle">and compares the Argon2id hash</text>
+
+    <line x1="480" y1="322" x2="480" y2="342" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,342 486,342 480,354" fill="#1d6fbf"/>
+
+    <rect x="170" y="354" width="620" height="64" rx="8" fill="#e7f6f1" stroke="#0e7c66" stroke-width="2"/>
+    <text x="480" y="382" text-anchor="middle">4. Match. Identity writes a hashed refresh token</text>
+    <text x="480" y="402" text-anchor="middle">and returns an access token plus that refresh token</text>
+
+    <line x1="480" y1="418" x2="480" y2="438" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,438 486,438 480,450" fill="#1d6fbf"/>
+
+    <rect x="150" y="450" width="660" height="64" rx="8" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="480" y="478" text-anchor="middle">5. Later calls send only the access token</text>
+    <text x="480" y="498" text-anchor="middle">Authorization: Bearer &lt;access token&gt;</text>
+  </g>
+
+  <rect x="32" y="540" width="896" height="72" rx="10" fill="#fff7ed" stroke="#b86e00"/>
+  <text x="52" y="572" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Wrong password: identity still spends the hash time, writes an audit row, and returns 401.</text>
+  <text x="52" y="594" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">It does not say whether the email exists. That avoids helping someone fish for accounts.</text>
+</svg>

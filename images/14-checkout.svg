@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Order 1001, after Priya is already logged in</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Her access token opens the door. Service tokens do the work behind it.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1c2833">
+    <rect x="32" y="96" width="168" height="110" rx="10" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="48" y="128" font-weight="700" fill="#16324f">Cart</text>
+    <text x="48" y="156">Redis holds</text>
+    <text x="48" y="176">1 copper kettle</text>
+    <text x="48" y="196">under her user id</text>
+
+    <rect x="220" y="96" width="168" height="110" rx="10" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="236" y="128" font-weight="700" fill="#16324f">Orders</text>
+    <text x="236" y="156">Writes order 1001</text>
+    <text x="236" y="176">status CREATED</text>
+    <text x="236" y="196">user id = Priya</text>
+
+    <rect x="408" y="96" width="168" height="110" rx="10" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+    <text x="424" y="128" font-weight="700" fill="#16324f">Inventory</text>
+    <text x="424" y="156">Reserves 1 kettle</text>
+    <text x="424" y="176">Stock 40 becomes</text>
+    <text x="424" y="196">39 available</text>
+
+    <rect x="596" y="96" width="168" height="110" rx="10" fill="#ffffff" stroke="#9f3a38" stroke-width="2"/>
+    <text x="612" y="128" font-weight="700" fill="#16324f">Payments</text>
+    <text x="612" y="156">Captures Rs 2,499</text>
+    <text x="612" y="176">key: order-1001</text>
+    <text x="612" y="196">retry will not rebill</text>
+
+    <rect x="784" y="96" width="144" height="110" rx="10" fill="#16324f"/>
+    <text x="800" y="128" font-weight="700" fill="#ffffff">Mail</text>
+    <text x="800" y="156" fill="#ffffff">Kafka event</text>
+    <text x="800" y="176" fill="#ffffff">OrderPlaced</text>
+    <text x="800" y="196" fill="#ffffff">receipt sent</text>
+  </g>
+
+  <rect x="32" y="236" width="896" height="152" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="272" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#16324f">If the payment is declined</text>
+  <text x="52" y="304" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Orders set status CANCELLED and ask inventory to release the kettle. Stock returns to 40.</text>
+  <text x="52" y="332" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">No receipt event is published. Priya can try again. The next attempt uses a new order id.</text>
+  <text x="52" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Identity is quiet during this part. It already answered who she is before checkout started.</text>
+</svg>

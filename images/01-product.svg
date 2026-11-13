@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="#f4f7fb"/>
+  <text x="32" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Harbor Shop is one online store</text>
+  <text x="32" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">A customer buys a physical product. Staff can refund it. One seller, not a marketplace.</text>
+
+  <rect x="32" y="100" width="200" height="150" rx="12" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+  <text x="48" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Priya</text>
+  <text x="48" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1c2833">Customer</text>
+  <text x="48" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">Browses, carts,</text>
+  <text x="48" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">pays, sees her orders</text>
+
+  <rect x="256" y="100" width="200" height="150" rx="12" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+  <text x="272" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Arun</text>
+  <text x="272" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1c2833">Support</text>
+  <text x="272" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">Looks up an order</text>
+  <text x="272" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">and refunds it</text>
+
+  <rect x="480" y="100" width="200" height="150" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+  <text x="496" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Meera</text>
+  <text x="496" y="156" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1c2833">Admin</text>
+  <text x="496" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">Manages roles and</text>
+  <text x="496" y="202" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">catalog data</text>
+
+  <rect x="704" y="100" width="224" height="150" rx="12" fill="#16324f"/>
+  <text x="720" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Version one shop</text>
+  <text x="720" y="162" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d6e4f0">Copper kettle  Rs 2,499</text>
+  <text x="720" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d6e4f0">Desk lamp  Rs 1,299</text>
+  <text x="720" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d6e4f0">Bedsheet  Rs 1,899</text>
+
+  <rect x="32" y="286" width="896" height="196" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">What Priya does on a normal visit</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1c2833">
+    <rect x="52" y="344" width="150" height="86" rx="8" fill="#e8f2fc"/>
+    <text x="68" y="376">1. Open the site</text>
+    <text x="68" y="396">and search</text>
+    <rect x="222" y="344" width="150" height="86" rx="8" fill="#e8f2fc"/>
+    <text x="238" y="376">2. Log in</text>
+    <text x="238" y="396">as herself</text>
+    <rect x="392" y="344" width="150" height="86" rx="8" fill="#e8f2fc"/>
+    <text x="408" y="376">3. Add the kettle</text>
+    <text x="408" y="396">to the cart</text>
+    <rect x="562" y="344" width="150" height="86" rx="8" fill="#e8f2fc"/>
+    <text x="578" y="376">4. Pay</text>
+    <text x="578" y="396">Rs 2,499</text>
+    <rect x="732" y="344" width="164" height="86" rx="8" fill="#e7f6f1"/>
+    <text x="748" y="376">5. Get a receipt</text>
+    <text x="748" y="396">for order 1001</text>
+  </g>
+</svg>

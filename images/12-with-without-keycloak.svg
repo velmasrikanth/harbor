@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Same shop, two ways to do login</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">We build the left side. The right side is the corporate product you should recognize.</text>
+
+  <rect x="32" y="96" width="430" height="320" rx="12" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+  <text x="52" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#1d6fbf">Without Keycloak, this build</text>
+  <text x="52" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Harbor identity is a Java service.</text>
+  <text x="52" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">It stores users in its PostgreSQL.</text>
+  <text x="52" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">It checks the password itself.</text>
+  <text x="52" y="254" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">It signs the access token.</text>
+  <text x="52" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Orders still only see a JWT.</text>
+  <text x="52" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0e7c66">You operate one more app you own:</text>
+  <text x="52" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0e7c66">code, migrations, keys, and backups.</text>
+  <text x="52" y="382" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Company directory login waits.</text>
+
+  <rect x="498" y="96" width="430" height="320" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+  <text x="518" y="132" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#b86e00">With Keycloak, later option</text>
+  <text x="518" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Keycloak is a ready-made login product.</text>
+  <text x="518" y="198" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">It stores users in its own PostgreSQL.</text>
+  <text x="518" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Priya types her password on Keycloak.</text>
+  <text x="518" y="254" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Keycloak signs the access token.</text>
+  <text x="518" y="282" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Orders still only see a JWT.</text>
+  <text x="518" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#b86e00">You operate Keycloak, not password code:</text>
+  <text x="518" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#b86e00">realm, clients, keys, upgrades, backups.</text>
+  <text x="518" y="382" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Company directory login fits here.</text>
+
+  <rect x="32" y="440" width="896" height="88" rx="12" fill="#16324f"/>
+  <text x="52" y="476" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">Orders, cart, and payments do not change their question: is this token signed, current, and allowed?</text>
+  <text x="52" y="502" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">What changes is who issues the token and whose database holds the password hash.</text>
+</svg>

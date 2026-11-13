@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500">
+  <rect width="960" height="500" fill="#f4f7fb"/>
+  <text x="32" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Orders calling payments is a different identity</text>
+  <text x="32" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Priya already asked to buy. The next call is the orders program speaking as itself.</text>
+
+  <rect x="32" y="100" width="280" height="150" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+  <text x="48" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Orders service</text>
+  <text x="48" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Has a client id and</text>
+  <text x="48" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">a client secret.</text>
+  <text x="48" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">The secret is not Priya's password.</text>
+
+  <rect x="340" y="100" width="280" height="150" rx="12" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+  <text x="356" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Identity</text>
+  <text x="356" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Checks the client secret.</text>
+  <text x="356" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Returns a 5-minute</text>
+  <text x="356" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">service token.</text>
+
+  <rect x="648" y="100" width="280" height="150" rx="12" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+  <text x="664" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Payments</text>
+  <text x="664" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Sees caller harbor-orders.</text>
+  <text x="664" y="190" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Charges order 1001 once.</text>
+  <text x="664" y="220" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Priya's user id is on the order row.</text>
+
+  <polygon points="312,175 340,175 332,168 332,182" fill="#1d6fbf"/>
+  <line x1="312" y1="175" x2="340" y2="175" stroke="#1d6fbf" stroke-width="2"/>
+  <polygon points="620,175 648,175 640,168 640,182" fill="#1d6fbf"/>
+  <line x1="620" y1="175" x2="648" y2="175" stroke="#1d6fbf" stroke-width="2"/>
+
+  <rect x="32" y="284" width="896" height="180" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Why this split matters in operations</text>
+  <text x="52" y="356" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Priya's token proves she asked to buy. It should not be handed to every internal service.</text>
+  <text x="52" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">The client secret is a machine credential. It belongs in a secret store, and rotation is a planned change.</text>
+  <text x="52" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">If payments sees a CUSTOMER token on the charge API, that is the wrong credential for that door.</text>
+  <text x="52" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">The charge still records user id 8f3c2a10-priya, copied from the order, so the receipt has a person on it.</text>
+</svg>

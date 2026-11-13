@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
+  <rect width="960" height="620" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Login if Keycloak is added later</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Not part of the current build. The password page belongs to Keycloak, realm harbor.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">
+    <rect x="230" y="92" width="500" height="48" rx="8" fill="#16324f"/>
+    <text x="480" y="122" text-anchor="middle" fill="#ffffff">1. Priya clicks login on the shop</text>
+    <line x1="480" y1="140" x2="480" y2="156" stroke="#b86e00" stroke-width="2"/>
+    <polygon points="474,156 486,156 480,168" fill="#b86e00"/>
+
+    <rect x="170" y="168" width="620" height="56" rx="8" fill="#fff7ed" stroke="#b86e00" stroke-width="2"/>
+    <text x="480" y="202" text-anchor="middle">2. Browser goes to auth.harbor.local, client harbor-web</text>
+    <line x1="480" y1="224" x2="480" y2="240" stroke="#b86e00" stroke-width="2"/>
+    <polygon points="474,240 486,240 480,252" fill="#b86e00"/>
+
+    <rect x="150" y="252" width="660" height="56" rx="8" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="480" y="286" text-anchor="middle">3. She types the password on Keycloak's page</text>
+    <line x1="480" y1="308" x2="480" y2="324" stroke="#b86e00" stroke-width="2"/>
+    <polygon points="474,324 486,324 480,336" fill="#b86e00"/>
+
+    <rect x="130" y="336" width="700" height="64" rx="8" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="480" y="364" text-anchor="middle">4. Keycloak sends a short code back to the shop</text>
+    <text x="480" y="384" text-anchor="middle">The shop exchanges the code for tokens</text>
+    <line x1="480" y1="400" x2="480" y2="416" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,416 486,416 480,428" fill="#1d6fbf"/>
+
+    <rect x="150" y="428" width="660" height="56" rx="8" fill="#e7f6f1" stroke="#0e7c66" stroke-width="2"/>
+    <text x="480" y="462" text-anchor="middle">5. Orders checks the JWT the same way as in the build</text>
+  </g>
+
+  <rect x="32" y="512" width="896" height="80" rx="10" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="546" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Realm harbor holds Priya, Arun, and Meera. The master realm is only for running Keycloak itself.</text>
+  <text x="52" y="570" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Shipping addresses stay in the shop database, joined by the user id in the token.</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">What happens on GET /orders</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <rect x="280" y="70" width="400" height="48" rx="8" fill="#16324f"/>
+    <text x="480" y="100" text-anchor="middle" fill="#ffffff">Browser sends Priya's access token</text>
+    <line x1="480" y1="118" x2="480" y2="136" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,136 486,136 480,148" fill="#1d6fbf"/>
+
+    <rect x="220" y="148" width="520" height="64" rx="8" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="480" y="176" text-anchor="middle" fill="#1c2833">Gateway checks signature, issuer, and expiry</text>
+    <text x="480" y="196" text-anchor="middle" fill="#5c6b7a">Fail here: 401, orders is never called</text>
+    <line x1="480" y1="212" x2="480" y2="230" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,230 486,230 480,242" fill="#1d6fbf"/>
+
+    <rect x="200" y="242" width="560" height="64" rx="8" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="480" y="270" text-anchor="middle" fill="#1c2833">Orders checks the role and the user id</text>
+    <text x="480" y="290" text-anchor="middle" fill="#5c6b7a">Wrong role, or someone else's order: 403</text>
+    <line x1="480" y1="306" x2="480" y2="324" stroke="#1d6fbf" stroke-width="2"/>
+    <polygon points="474,324 486,324 480,336" fill="#1d6fbf"/>
+
+    <rect x="220" y="336" width="520" height="56" rx="8" fill="#e7f6f1" stroke="#0e7c66" stroke-width="2"/>
+    <text x="480" y="370" text-anchor="middle" fill="#16324f">Orders reads its own database and returns order 1001</text>
+  </g>
+
+  <rect x="32" y="420" width="896" height="112" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="456" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#16324f">Two doors, on purpose</text>
+  <text x="52" y="486" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">The gateway is the front door. The service is the second door.</text>
+  <text x="52" y="510" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">A caller who reaches orders by a side path still has to pass the role check.</text>
+</svg>

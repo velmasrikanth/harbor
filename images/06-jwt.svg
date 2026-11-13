@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500">
+  <rect width="960" height="500" fill="#f4f7fb"/>
+  <text x="32" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">The three parts of Priya's access token</text>
+  <text x="32" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Anyone who holds the token can read the middle part. The signature shows it was not edited.</text>
+
+  <rect x="32" y="100" width="280" height="150" rx="12" fill="#1d6fbf"/>
+  <text x="48" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Header</text>
+  <text x="48" y="168" font-family="Consolas, Courier New, monospace" font-size="13" fill="#ffffff">alg: RS256</text>
+  <text x="48" y="192" font-family="Consolas, Courier New, monospace" font-size="13" fill="#ffffff">kid: harbor-key-1</text>
+  <text x="48" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d6e4f0">Which key signed this</text>
+
+  <rect x="340" y="100" width="280" height="150" rx="12" fill="#0e7c66"/>
+  <text x="356" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Payload</text>
+  <text x="356" y="168" font-family="Consolas, Courier New, monospace" font-size="13" fill="#ffffff">sub: Priya's id</text>
+  <text x="356" y="192" font-family="Consolas, Courier New, monospace" font-size="13" fill="#ffffff">role: CUSTOMER</text>
+  <text x="356" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d8f3ea">Readable claims. Not a hiding place.</text>
+
+  <rect x="648" y="100" width="280" height="150" rx="12" fill="#16324f"/>
+  <text x="664" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Signature</text>
+  <text x="664" y="168" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#ffffff">Private key signs.</text>
+  <text x="664" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#ffffff">Public key checks.</text>
+  <text x="664" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#d6e4f0">A changed role breaks this part.</text>
+
+  <rect x="32" y="280" width="896" height="188" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="316" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Payload for this example</text>
+  <text x="52" y="350" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1c2833">iss: https://identity.harbor.local</text>
+  <text x="52" y="374" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1c2833">sub: 8f3c2a10-priya     role: CUSTOMER</text>
+  <text x="52" y="398" font-family="Consolas, Courier New, monospace" font-size="14" fill="#1c2833">exp: 15 minutes after issue     iat: time of issue</text>
+  <text x="52" y="436" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Leave her address, phone, and payment data out of this payload.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+  <rect width="960" height="480" fill="#f4f7fb"/>
+  <text x="32" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Access token and refresh token</text>
+
+  <rect x="32" y="74" width="430" height="250" rx="12" fill="#ffffff" stroke="#1d6fbf" stroke-width="2"/>
+  <text x="52" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#1d6fbf">Access token</text>
+  <text x="52" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Lives for 15 minutes.</text>
+  <text x="52" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Sent to catalog, cart, and orders.</text>
+  <text x="52" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Signed JWT. Services check it</text>
+  <text x="52" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">with the public key.</text>
+  <text x="52" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0e7c66">A stolen one dies quickly.</text>
+
+  <rect x="498" y="74" width="430" height="250" rx="12" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+  <text x="518" y="112" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0e7c66">Refresh token</text>
+  <text x="518" y="148" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Lives for 7 days in this lab.</text>
+  <text x="518" y="176" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Sent only to identity, at /refresh.</text>
+  <text x="518" y="204" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Stored as a hash in PostgreSQL.</text>
+  <text x="518" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Each use retires the old one.</text>
+  <text x="518" y="268" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#0e7c66">This is how she stays logged in.</text>
+
+  <rect x="32" y="348" width="896" height="100" rx="12" fill="#16324f"/>
+  <text x="52" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">Minute 16: the access token is expired. Orders return 401.</text>
+  <text x="52" y="414" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">The website calls /refresh, receives a new 15-minute access token, and retries the order call.</text>
+</svg>
