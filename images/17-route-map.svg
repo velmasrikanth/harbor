@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Harbor routes on shop.harbor.local</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">The path chooses the service. The auth column says whether a token is required at the door.</text>
+
+  <rect x="32" y="92" width="896" height="36" rx="8" fill="#16324f"/>
+  <text x="48" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Path</text>
+  <text x="390" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Goes to</text>
+  <text x="620" y="116" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Token at the gateway</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">
+    <rect x="32" y="136" width="896" height="40" fill="#ffffff"/>
+    <text x="48" y="162">/ and /assets</text>
+    <text x="390" y="162">website files</text>
+    <text x="620" y="162" fill="#0e7c66">none</text>
+
+    <rect x="32" y="176" width="896" height="40" fill="#e8f2fc"/>
+    <text x="48" y="202">POST /api/login and /api/register</text>
+    <text x="390" y="202">identity</text>
+    <text x="620" y="202" fill="#0e7c66">none, strict rate limit</text>
+
+    <rect x="32" y="216" width="896" height="40" fill="#ffffff"/>
+    <text x="48" y="242">GET /api/products and /api/search</text>
+    <text x="390" y="242">catalog or search</text>
+    <text x="620" y="242" fill="#0e7c66">none</text>
+
+    <rect x="32" y="256" width="896" height="40" fill="#e8f2fc"/>
+    <text x="48" y="282">/api/cart and /api/orders</text>
+    <text x="390" y="282">cart or orders</text>
+    <text x="620" y="282" fill="#b86e00">valid access token</text>
+
+    <rect x="32" y="296" width="896" height="40" fill="#ffffff"/>
+    <text x="48" y="322">POST /api/orders/.../refund</text>
+    <text x="390" y="322">orders</text>
+    <text x="620" y="322" fill="#b86e00">valid token, role inside orders</text>
+
+    <rect x="32" y="336" width="896" height="56" fill="#fdecec"/>
+    <text x="48" y="360">/api/payments and /api/inventory</text>
+    <text x="390" y="360">no public route</text>
+    <text x="620" y="360" fill="#9f3a38">not on this map</text>
+    <text x="48" y="380" fill="#5c6b7a">Orders calls those services on the private network.</text>
+  </g>
+
+  <rect x="32" y="416" width="896" height="112" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="452" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#16324f">Why refund is not a special gateway role check</text>
+  <text x="52" y="480" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">The gateway proves the token is real. Orders proves the role is SUPPORT and the order exists.</text>
+  <text x="52" y="504" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Putting every business rule in the gateway turns it into a second copy of every service.</text>
+</svg>

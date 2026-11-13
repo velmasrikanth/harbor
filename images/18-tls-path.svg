@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">TLS ends at the gateway in the lab</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">The public hop is encrypted. The hop inside Docker Compose is plain HTTP on a private network.</text>
+
+  <rect x="32" y="110" width="250" height="120" rx="12" fill="#16324f"/>
+  <text x="52" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Browser</text>
+  <text x="52" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#d6e4f0">Checks the certificate</text>
+  <text x="52" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#d6e4f0">for shop.harbor.local</text>
+
+  <rect x="355" y="110" width="250" height="120" rx="12" fill="#1d6fbf"/>
+  <text x="375" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Gateway</text>
+  <text x="375" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#d6e4f0">Holds the private key</text>
+  <text x="375" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#d6e4f0">Decrypts, then routes</text>
+
+  <rect x="678" y="110" width="250" height="120" rx="12" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+  <text x="698" y="154" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#16324f">Orders</text>
+  <text x="698" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">Receives HTTP</text>
+  <text x="698" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">from the gateway only</text>
+
+  <line x1="282" y1="170" x2="355" y2="170" stroke="#1d6fbf" stroke-width="3"/>
+  <polygon points="355,164 367,170 355,176" fill="#1d6fbf"/>
+  <text x="292" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d6fbf">HTTPS</text>
+
+  <line x1="605" y1="170" x2="678" y2="170" stroke="#0e7c66" stroke-width="3"/>
+  <polygon points="678,164 690,170 678,176" fill="#0e7c66"/>
+  <text x="612" y="158" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#0e7c66">HTTP</text>
+
+  <rect x="32" y="268" width="896" height="120" rx="12" fill="#ffffff" stroke="#d5deea"/>
+  <text x="52" y="304" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#16324f">What this means in operations</text>
+  <text x="52" y="334" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">The certificate and its private key live with the gateway. Renew the certificate before it expires.</text>
+  <text x="52" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#1c2833">A later cluster can encrypt the inside hop too. Version one keeps that hop private instead of pretending it is public.</text>
+</svg>

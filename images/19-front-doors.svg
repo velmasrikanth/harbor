@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Five names people use for the front of a system</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Harbor's lab gateway is the third box. You will meet the others in job descriptions.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="13">
+    <rect x="32" y="96" width="288" height="150" rx="12" fill="#ffffff" stroke="#5c6b7a" stroke-width="2"/>
+    <text x="48" y="128" font-size="16" font-weight="700" fill="#16324f">Reverse proxy</text>
+    <text x="48" y="160" fill="#1c2833">Receives HTTP and</text>
+    <text x="48" y="182" fill="#1c2833">forwards it to an app.</text>
+    <text x="48" y="214" fill="#5c6b7a">NGINX started as this.</text>
+
+    <rect x="336" y="96" width="288" height="150" rx="12" fill="#ffffff" stroke="#5c6b7a" stroke-width="2"/>
+    <text x="352" y="128" font-size="16" font-weight="700" fill="#16324f">Load balancer</text>
+    <text x="352" y="160" fill="#1c2833">Spreads traffic across</text>
+    <text x="352" y="182" fill="#1c2833">several copies of one app.</text>
+    <text x="352" y="214" fill="#5c6b7a">Layer 4 or layer 7.</text>
+
+    <rect x="640" y="96" width="288" height="150" rx="12" fill="#e8f2fc" stroke="#1d6fbf" stroke-width="2"/>
+    <text x="656" y="128" font-size="16" font-weight="700" fill="#1d6fbf">API gateway</text>
+    <text x="656" y="160" fill="#1c2833">Proxy plus routes, tokens,</text>
+    <text x="656" y="182" fill="#1c2833">limits, and request logs.</text>
+    <text x="656" y="214" fill="#1d6fbf">This is Harbor's door.</text>
+
+    <rect x="32" y="270" width="440" height="150" rx="12" fill="#ffffff" stroke="#0e7c66" stroke-width="2"/>
+    <text x="48" y="302" font-size="16" font-weight="700" fill="#16324f">Ingress</text>
+    <text x="48" y="334" fill="#1c2833">A Kubernetes description of HTTP routes</text>
+    <text x="48" y="356" fill="#1c2833">into the cluster. A controller, often NGINX,</text>
+    <text x="48" y="378" fill="#1c2833">does the forwarding. Same job, cluster wording.</text>
+
+    <rect x="488" y="270" width="440" height="150" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="504" y="302" font-size="16" font-weight="700" fill="#16324f">Service mesh</text>
+    <text x="504" y="334" fill="#1c2833">Sidecars beside each service for calls</text>
+    <text x="504" y="356" fill="#1c2833">between services. Orders to payments.</text>
+    <text x="504" y="378" fill="#1c2833">That path is inside. The gateway faces users.</text>
+  </g>
+
+  <rect x="32" y="444" width="896" height="88" rx="12" fill="#16324f"/>
+  <text x="52" y="480" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">North-south: user to gateway to a service. That is this chapter.</text>
+  <text x="52" y="506" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#ffffff">East-west: service to service. Harbor uses the private network for that, not the public gateway.</text>
+</svg>

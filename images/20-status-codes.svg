@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+  <rect width="960" height="480" fill="#f4f7fb"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#16324f">Errors the gateway can answer by itself</text>
+  <text x="32" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#5c6b7a">Read the status before you restart a service. The service may never have been called.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14">
+    <rect x="32" y="100" width="440" height="100" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="48" y="136" font-weight="700" fill="#b86e00">401 from the gateway</text>
+    <text x="48" y="164" fill="#1c2833">Token missing, expired, or badly signed.</text>
+    <text x="48" y="186" fill="#5c6b7a">Orders log has no line for this call.</text>
+
+    <rect x="488" y="100" width="440" height="100" rx="12" fill="#ffffff" stroke="#b86e00" stroke-width="2"/>
+    <text x="504" y="136" font-weight="700" fill="#b86e00">429 from the gateway</text>
+    <text x="504" y="164" fill="#1c2833">Priya's IP passed the login limit.</text>
+    <text x="504" y="186" fill="#5c6b7a">Identity was spared the password hash.</text>
+
+    <rect x="32" y="220" width="440" height="100" rx="12" fill="#ffffff" stroke="#9f3a38" stroke-width="2"/>
+    <text x="48" y="256" font-weight="700" fill="#9f3a38">502 Bad Gateway</text>
+    <text x="48" y="284" fill="#1c2833">Orders refused the connection or</text>
+    <text x="48" y="306" fill="#1c2833">sent a broken response.</text>
+
+    <rect x="488" y="220" width="440" height="100" rx="12" fill="#ffffff" stroke="#9f3a38" stroke-width="2"/>
+    <text x="504" y="256" font-weight="700" fill="#9f3a38">504 Gateway Timeout</text>
+    <text x="504" y="284" fill="#1c2833">Orders accepted the call and did not</text>
+    <text x="504" y="306" fill="#1c2833">answer before the gateway timer.</text>
+
+    <rect x="32" y="340" width="896" height="108" rx="12" fill="#e7f6f1" stroke="#0e7c66"/>
+    <text x="48" y="376" font-weight="700" fill="#0e7c66">403 is different</text>
+    <text x="48" y="404" fill="#1c2833">A 403 on a refund came from orders, after the gateway let the token through.</text>
+    <text x="48" y="428" fill="#1c2833">The token was real. The role was wrong. Look at orders, not at the certificate.</text>
+  </g>
+</svg>

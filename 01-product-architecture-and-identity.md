@@ -690,10 +690,12 @@ Nothing in catalog, cart, inventory, payments, search, or notifications needs Ke
 
 ## 6. Next chapter
 
-The next note can go into one of these, at the same depth:
+The API gateway is written up in `02-api-gateway.md`: the public door, the route table, TLS, rate limits, token checks, timeouts, and the status codes the gateway produces on its own.
 
+Later notes can cover:
+
+- The runtime contract every service must expose: port, health, config, logs, and a request id
 - Catalog and inventory: tables, stock reservation, and what you operate for two Go services
-- The runtime contract every service must expose: port, health, config, logs, and a correlation id
 - Orders, the saga, and the idempotency key on payment
 
 The build prompt for Cursor comes after those chapters are as concrete as this one.
